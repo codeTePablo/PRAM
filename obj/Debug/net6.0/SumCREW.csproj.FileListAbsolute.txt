@@ -1,0 +1,15 @@
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\bin\Debug\net6.0\SumCREW.exe
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\bin\Debug\net6.0\SumCREW.deps.json
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\bin\Debug\net6.0\SumCREW.runtimeconfig.json
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\bin\Debug\net6.0\SumCREW.dll
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\bin\Debug\net6.0\SumCREW.pdb
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\SumCREW.csproj.AssemblyReference.cache
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\SumCREW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\SumCREW.AssemblyInfoInputs.cache
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\SumCREW.AssemblyInfo.cs
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\SumCREW.csproj.CoreCompileInputs.cache
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\SumCREW.dll
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\refint\SumCREW.dll
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\SumCREW.pdb
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\SumCREW.genruntimeconfig.cache
+C:\Users\jopsa\OneDrive\Documents\My\Uni\2022B\Paradigm\SumCREW\obj\Debug\net6.0\ref\SumCREW.dll

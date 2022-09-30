@@ -1,16 +1,15 @@
 ﻿using System;
 
-namespace ConsoleApplication
+namespace SumCREW
 {
     public class Program
     {
         static int i = 1;
         
-        public static void Main(string[] args)
-        {
-           int[] A = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        public void Main(string[] args){ 
+           int[] A ={ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
            int n = 9; 
-           int j = 0;
+           int j = 1;
              for (i = 1; i <= Math.Log(n); i++)
             {
                 Parallel.For(0, (int)Math.Pow(2,i-1), n =>
@@ -19,8 +18,9 @@ namespace ConsoleApplication
                 });
             }
             for(int k = 1; k <= n; k++){
-            Console.WriteLine(A[i]);
+            Console.WriteLine(A[k]);
             }
+            // Console.WriteLine("here");
         }
     }
 }
