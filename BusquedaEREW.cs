@@ -27,38 +27,38 @@ namespace BusquedaEREW{
         }
 
 
-        public int minimo(int[] temp, int A)
+        public int minimo(int[] A, int numA)
         {
             // int j = 0;
-            for(int j = 1; j <= ((int)(Math.Log(2, A))); j++)
+            for(int j = 1; j <= ((int)(Math.Log(2, numA))); j++)
             {
-                    for(i = 1; i <= A / ((int)(Math.Pow(2, j))); i++)
+                    for(i = 1; i <= numA / ((int)(Math.Pow(2, j))); i++)
                     {
                     Parallel.For(0, i++, index => {
-                        if(temp[(int)(Math.Pow(2, i-1))] > temp[(int)(Math.Pow(2, i))])
+                        if(A[(int)(Math.Pow(2, i-1))] > A[(int)(Math.Pow(2, i))])
                         {
-                            temp[i] = temp[(int)(Math.Pow(2, i))];
+                            A[i] = A[(int)(Math.Pow(2, i))];
                         }else
                         {
-                            temp[i] = temp[(int)(Math.Pow(2, i-1))];
+                            A[i] = A[(int)(Math.Pow(2, i-1))];
                         }
                     });
                     }
             }
             // n = temp[1];
-            for(i = 0; i <= A; i++)
+            for(i = 0; i <= numA; i++)
             {
-                if(n > temp[i])
+                if(n > A[i])
                 {
-                    n = temp[i];
+                    n = A[i];
                 }
             }
-            temp[1] = n;
-            return temp[1];
+            A[1] = n;
+            return A[1];
             // Console.WriteLine(n);
         }
 
-        int search(int val, int[] temp, int A)
+        public int search(int[] A, int val, int numA)
         {
             // int[] temp = new int[100];
             // int[] A = {1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -66,28 +66,31 @@ namespace BusquedaEREW{
             broadcast(temp, x, val);
 
             int i = 1;
-            for(i = 1; i <= A; i++){
-                
-                Parallel.for(0, i++, index => 
-                {
-                    if(temp[i] == )
+            for(i = 1; i <= numA; i++){
+                Parallel.For(0, i++, index => {
+                    if(A[i] == temp[i])
                     {
-                
+                        temp[i] = i;
+                    }else{
+                        temp[i] = 0;
                     }
                 });
+                
             }
                     
             // minimo(temp, x);
             // return temp[1];
+            return (minimo(A, numA));
         }
+        public static int[] temp = {1,2,3,4,5};
+        public static int[] A = {};
+        // public static A[0] = 0;
 
         public void Main(string[] args){ 
-            // checj temp and A
-        int[] temp = {1,2,3,4,5};
         // call method 
-            // broadcast(temp, 5, 4);
+            broadcast(temp, 5, 4);
             // minimo(temp, 4);
-            search(2, temp, 5);
+            // search(A, 5, 5);
 
         }
     }
