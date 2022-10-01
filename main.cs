@@ -8,9 +8,13 @@ namespace main{
             SumCREW.Program c = new SumCREW.Program();
             MultiMatiz.Program m = new MultiMatiz.Program();
 
-
+            // run sumEREW
             e.Main(args);
+
+            // run sumCREW
             // c.Main(args);
+            
+            // run MultiMatiz
             // m.Main(args);
         }
     }
