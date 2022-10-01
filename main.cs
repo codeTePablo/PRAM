@@ -9,10 +9,10 @@ namespace main{
             MultiMatiz.Program m = new MultiMatiz.Program();
 
             // run sumEREW
-            e.Main(args);
+            // e.Main(args);
 
             // run sumCREW
-            // c.Main(args);
+            c.Main(args);
             
             // run MultiMatiz
             // m.Main(args);
