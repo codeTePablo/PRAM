@@ -26,11 +26,68 @@ namespace BusquedaEREW{
 
         }
 
+
+        public int minimo(int[] temp, int A)
+        {
+            // int j = 0;
+            for(int j = 1; j <= ((int)(Math.Log(2, A))); j++)
+            {
+                    for(i = 1; i <= A / ((int)(Math.Pow(2, j))); i++)
+                    {
+                    Parallel.For(0, i++, index => {
+                        if(temp[(int)(Math.Pow(2, i-1))] > temp[(int)(Math.Pow(2, i))])
+                        {
+                            temp[i] = temp[(int)(Math.Pow(2, i))];
+                        }else
+                        {
+                            temp[i] = temp[(int)(Math.Pow(2, i-1))];
+                        }
+                    });
+                    }
+            }
+            // n = temp[1];
+            for(i = 0; i <= A; i++)
+            {
+                if(n > temp[i])
+                {
+                    n = temp[i];
+                }
+            }
+            temp[1] = n;
+            return temp[1];
+            // Console.WriteLine(n);
+        }
+
+        int search(int val, int[] temp, int A)
+        {
+            // int[] temp = new int[100];
+            // int[] A = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+            // int val = 5;
+            broadcast(temp, x, val);
+
+            int i = 1;
+            for(i = 1; i <= A; i++){
+                
+                Parallel.for(0, i++, index => 
+                {
+                    if(temp[i] == )
+                    {
+                
+                    }
+                });
+            }
+                    
+            // minimo(temp, x);
+            // return temp[1];
+        }
+
         public void Main(string[] args){ 
+            // checj temp and A
         int[] temp = {1,2,3,4,5};
         // call method 
-            broadcast(temp, 5, 4);
-
+            // broadcast(temp, 5, 4);
+            // minimo(temp, 4);
+            search(2, temp, 5);
 
         }
     }
