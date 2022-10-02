@@ -47,7 +47,7 @@ namespace BusquedaOrdenamiento{
         {
             int[] win = {n};
             int[] L2 = {n};
-            int index = 1;
+            int minIndex = 1;
 
             for(int i = 1; i <= n; i++)
             {
@@ -56,37 +56,34 @@ namespace BusquedaOrdenamiento{
                 });
             }
 
-            for(int i = 1; i <= n; i++)
+            for(int i = 0; i <= n; i++)
             {
-                Parallel.For(0, i++, index => {
-                    for(int j = 1; j <= n; j++)
-                    {
+                for(int j = 0; j <= n; j++)
+                {
+                    Parallel.For(0, j++, index => {
                         if(L[i] > L[j])
                         {
                             win[i] = 1;
                         }else{
                             win[j] = 1;
                         }
-                    }
-                });
+                    });
+                }
             }
 
-            for(int i = 1; i <= n; i++)
+            for(int i = 0; i <= n; i++)
             {
                 Parallel.For(0, i++, index => {
                     if(win[i] == 0)
                     {
                         // L2[index] = L[i];
-                        index = 1;
+                        minIndex = 1;
                     }
                 });
 
             }
 
-            for(int i = 1; i <= n; i++)
-            {
-                Console.WriteLine(L[i]);
-            }
+            imp(win, n);
         }
 
         public void imp (int[] L, int n)
@@ -96,11 +93,12 @@ namespace BusquedaOrdenamiento{
                 Console.WriteLine(L[i]);
             }
         }
+        public static int n = 3;
 
         public void Main(string[] args)
         {
-            int n = 3;
             // sortCRCW(L, n);
+            // min(L, n);
             imp(L, n);
         }
               
