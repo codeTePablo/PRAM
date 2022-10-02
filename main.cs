@@ -8,8 +8,8 @@ namespace main{
             SumCREW.Program c = new SumCREW.Program();
             BusquedaEREW.Program b = new BusquedaEREW.Program();
             BusquedaOrdenamiento.Program o = new BusquedaOrdenamiento.Program();
+            OrdenamientoEREW.Program oe = new OrdenamientoEREW.Program();
             MultiMatiz.Program m = new MultiMatiz.Program();
-
             // run sumEREW
             // e.Main(args);
 
@@ -20,7 +20,10 @@ namespace main{
             // b.Main(args);
 
             // run busquedaOrdenamiento
-            o.Main(args);
+            // o.Main(args);
+
+            // run ordenamientoEREW
+            oe.Main(args);
 
             // run MultiMatiz
             // m.Main(args);
