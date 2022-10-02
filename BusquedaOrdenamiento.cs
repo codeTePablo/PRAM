@@ -35,9 +35,12 @@ namespace BusquedaOrdenamiento{
             for(int i = 1; i <= n; i++)
             {
                 Parallel.For(0, i++, index => {
-                    L[win[i]] = L[i];
+                    L[1 + win[i]] = L[i];
                 });
             }
+
+            imp(win, n);
+            // imp(L, n);
         }
 
         public void imp (int[] L, int n)
