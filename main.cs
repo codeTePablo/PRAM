@@ -10,20 +10,21 @@ namespace main{
             BusquedaOrdenamiento.Program o = new BusquedaOrdenamiento.Program();
             OrdenamientoEREW.Program oe = new OrdenamientoEREW.Program();
             MultiMatiz.Program m = new MultiMatiz.Program();
+            
             // run sumEREW
             // e.Main(args);
 
             // run sumCREW
-            // c.Main(args);
+            // c.Main(args);k
             
             // run busquedaEREW
-            b.Main(args);
+            // b.Main(args);
 
             // run busquedaOrdenamiento
             // o.Main(args);
 
             // run ordenamientoEREW
-            // oe.Main(args);
+            oe.Main(args);
 
             // run MultiMatiz
             // m.Main(args);
