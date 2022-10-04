@@ -21,7 +21,7 @@ namespace SumEREW
                         A[j * 2] = A[j * 2] + A[(2 * j) - (int)(Math.Pow(2, i - 1))];
                     }
                 });
-            for (int k = 1; k <= n; k++){
+            for (int k = 0; k <= n; k++){
                 Console.WriteLine(A[k]);
             }
             }                

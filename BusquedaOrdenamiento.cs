@@ -39,10 +39,10 @@ namespace BusquedaOrdenamiento{
                 });
             }
 
-            imp(win, n);
+            Console.WriteLine("El minimo es: " + L[n]);
+            // imp(win, n);
             // imp(L, n);
         }
-
         public void min(int[] L, int n)
         {
             int[] win = {n};
@@ -76,15 +76,27 @@ namespace BusquedaOrdenamiento{
                 Parallel.For(0, i++, index => {
                     if(win[i] == 0)
                     {
-                        // L2[index] = L[i];
                         minIndex = 1;
                     }
                 });
 
             }
-
-            imp(win, n);
+            // Console.WriteLine("El minimo es: " + win[n]);
+            // imp(win, n);
         }
+
+            public static bool Limitation(int entrada, int lower, int upper, string error)
+        {
+            if (entrada >= lower && entrada <= upper)
+            {
+                return true;
+                }
+                else
+                {
+                    Console.WriteLine(error);
+                    return false;
+                }            
+        } 
 
         public void imp (int[] L, int n)
         {
@@ -98,9 +110,21 @@ namespace BusquedaOrdenamiento{
         public void Main(string[] args)
         {
             // sortCRCW(L, n);
-            // min(L, n);
-            imp(L, n);
+        int entrada;
+        bool valid = false;
+        Console.Write("Buscar valor\n");
+            while (!valid)
+            {
+                Console.WriteLine("Introduzca un índice del arreglo: ");
+                entrada = Convert.ToInt32(Console.ReadLine());
+                valid = Limitation(entrada, 0, L.Length - 1, "Ese no es un index válido.");
+                if (valid)
+                {
+                    Console.WriteLine($"El valor en el index {entrada} es {L[entrada]}");
+                }
+            }
+            // min(L, 6);
+            // imp(L, n);
         }
-              
     }
 }

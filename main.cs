@@ -17,18 +17,16 @@ namespace main{
             // c.Main(args);
             
             // run busquedaEREW
-            // b.Main(args);
+            b.Main(args);
 
             // run busquedaOrdenamiento
             // o.Main(args);
 
             // run ordenamientoEREW
-            oe.Main(args);
+            // oe.Main(args);
 
             // run MultiMatiz
             // m.Main(args);
-
-            // 
         }
     }
 }
