@@ -26,19 +26,6 @@ namespace BusquedaEREW{
 
         }
 
-        public static bool Limitation(int entrada, int lower, int upper, string error)
-        {
-            if (entrada >= lower && entrada <= upper)
-            {
-                return true;
-                }
-                else
-                {
-                    Console.WriteLine(error);
-                    return false;
-                }            
-        } 
-
         public int minimo(int[] A, int numA)
         {
             // int j = 0;
@@ -99,21 +86,6 @@ namespace BusquedaEREW{
         // public static A[0] = 0;
 
         public void Main(string[] args){ 
-        // call method 
-
-            int entrada;
-            bool valid = false;
-            Console.Write("Buscar valor\n");
-            while (!valid)
-            {
-                Console.WriteLine("Introduzca un índice del arreglo: ");
-                entrada = Convert.ToInt32(Console.ReadLine());
-                valid = Limitation(entrada, 0, temp.Length - 1, "Ese no es un index válido.");
-                if (valid)
-                {
-                    Console.WriteLine($"El valor en el index {entrada} es {temp[entrada]}");
-                }
-            }
 
             // broadcast(temp, 5, 4);
             // minimo(temp, 4);
