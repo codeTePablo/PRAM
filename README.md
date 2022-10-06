@@ -1,4 +1,4 @@
 # PRAM
 parellel programming C#
 
-exucute programs in main method 
+execute programs in main method 
