@@ -8,7 +8,6 @@ namespace main{
             BusquedaEREW.Program b = new BusquedaEREW.Program();
             BusquedaCRCW.Program cr = new BusquedaCRCW.Program();
             OrdenamientoCRCW.Program ocr = new OrdenamientoCRCW.Program();
-            // BusquedaOrdenamiento.Program o = new BusquedaOrdenamiento.Program();
             OrdenamientoEREW.Program oe = new OrdenamientoEREW.Program();
             MultiMatiz.Program m = new MultiMatiz.Program();
             
@@ -19,13 +18,13 @@ namespace main{
             // c.Main(args);k
             
             // run busquedaEREW
-            // b.Main(args);
+            b.Main(args);
 
             // run busquedaCRCW
             // cr.Main(args);
 
             // run ordenamientoCRCW
-            ocr.Main(args);
+            // ocr.Main(args);
 
             // run busquedaOrdenamiento
             // o.Main(args);
