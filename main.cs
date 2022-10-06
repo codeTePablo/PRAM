@@ -2,7 +2,12 @@ using System;
 
 namespace main{
     public class main{
-        public static void Main(string[] args){
+        public static void Main(string[] args)
+        {
+
+            // para ejecutar el programa que se quiere probar
+            // se debe descomentar la linea de codigo correspondiente 
+
             SumEREW.Program e = new SumEREW.Program();
             SumCREW.Program c = new SumCREW.Program();
             BusquedaEREW.Program b = new BusquedaEREW.Program();
@@ -15,7 +20,7 @@ namespace main{
             // e.Main(args);
 
             // run sumCREW
-            // c.Main(args);k
+            c.Main(args);
             
             // run busquedaEREW
             // b.Main(args);
@@ -30,10 +35,11 @@ namespace main{
             // o.Main(args);
 
             // run ordenamientoEREW
-            oe.Main(args);
+            // oe.Main(args);
 
             // run MultiMatiz
             // m.Main(args);
+
         }
     }
 }

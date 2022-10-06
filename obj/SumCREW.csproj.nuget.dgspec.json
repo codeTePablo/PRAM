@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\SumCREW\\SumCREW.csproj": {}
+    "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\PRAM\\SumCREW.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\SumCREW\\SumCREW.csproj": {
+    "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\PRAM\\SumCREW.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\SumCREW\\SumCREW.csproj",
+        "projectUniqueName": "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\PRAM\\SumCREW.csproj",
         "projectName": "SumCREW",
-        "projectPath": "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\SumCREW\\SumCREW.csproj",
+        "projectPath": "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\PRAM\\SumCREW.csproj",
         "packagesPath": "C:\\Users\\jopsa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\SumCREW\\obj\\",
+        "outputPath": "C:\\Users\\jopsa\\OneDrive\\Documents\\My\\Uni\\2022B\\Paradigm\\PRAM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jopsa\\AppData\\Roaming\\NuGet\\NuGet.Config"
