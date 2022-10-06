@@ -18,7 +18,7 @@ namespace main{
             // c.Main(args);k
             
             // run busquedaEREW
-            b.Main(args);
+            // b.Main(args);
 
             // run busquedaCRCW
             // cr.Main(args);
@@ -30,7 +30,7 @@ namespace main{
             // o.Main(args);
 
             // run ordenamientoEREW
-            // oe.Main(args);
+            oe.Main(args);
 
             // run MultiMatiz
             // m.Main(args);

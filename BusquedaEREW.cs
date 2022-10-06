@@ -12,7 +12,7 @@ namespace BusquedaEREW{
         public static int[] A, Temp;
 
         public void broadcast(int[] A, int x){
-            // val es el parametro a buscar 
+            
             i = 1;
             j = 1;
             A[1] = x;
@@ -30,9 +30,9 @@ namespace BusquedaEREW{
 
         public int minimo(int[] A)
         {
-            int i = 1;
-            int j = 1;
-            int n = 1;
+            // int i = 1;
+            // int j = 1;
+            // int n = 1;
 
             for(j = 1; j <= ((int)(Math.Log(2, n))); j++)
             {

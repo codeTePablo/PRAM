@@ -8,96 +8,56 @@ namespace OrdenamientoEREW{
 
         static int[] L = {16, 22, 35, 40, 53, 66, 70, 85, 15, 18, 23, 55, 60, 69, 72, 78};
         static int a = 16;
+        static int n = 1;
 
-    public void oddEvenMerge(int[] L, int n)
-{
-    if (n == 2)
+        // static int odd = 16;
+    public void MergeSortPRAM(int[] L, int n)
     {
-        if (L[0] > L[1])
+        if(n >= 2)
         {
-            change(L, 0, 1);
+            Parallel.Invoke(
+                () => MergeSortPRAM(L, n/2),
+                () => MergeSortPRAM(L, n/2 + 1)
+            );
+            oddEvenMergePRAM(L, n);
         }
     }
-    else
+    public void oddEvenMergePRAM(int[] L, int n)
     {
-        int m = (int)n / 2;
-        int odd = m;
-        int[] even = new int[m];
-
-        oddEvenSplit(L, odd, even, n);
+        if (n == 2)
         {
-            // oddEvenMerge(odd, m);
-            oddEvenMerge(even, m);
-        }
-
-        for (int i = 0; i < (int)n / 2; i++)
-        {
-            // L[2 * i] = odd[i];
-            L[2 * i + 1] = even[i];
-        }
-
-        for (int i = 0; i < n - 1; i++)
-        {
-
-            if ((L[i]) > (L[i + 1]))
+            if (L[1] > L[2])
             {
-                change(L, i, i + 1);
+                interchange(L, 0, 1);
             }
-        }
-    }
-}
+        }else
+        {            
+            int m = (int)n / 2;
+            int odd = m;
+            int[] even = new int[m];
+            oddEvenSplit(L, odd, even, n);
 
-        public int[] MergeSort(int[] L)
-        {
-            int Flag = 0;
-            int temp = 0;
-            while (Flag == 0)
+            Parallel.Invoke(
+                () => oddEvenMergePRAM(L, odd),
+                () => oddEvenMergePRAM(even, m)
+            );
+
+            Parallel.For(0, n/2, i =>
             {
-                Flag = 1;
-                for (int i = 0; i < L.Length - 1; i += 2)
+                L[2 * i + 1] = even[i];
+            });
+
+            Parallel.For(0, n/2, i =>
+            {
+                if ((L[i]) > (L[i + 1]))
                 {
-                    if (L[i] > L[i + 1])
-                    {
-                        temp = L[i];
-                        L[i] = L[i + 1];
-                        L[i + 1] = temp;
-                        Flag = 0;
-                    }
+                    interchange(L, i, i + 1);
                 }
-                for (int i = 1; i < L.Length - 1; i += 2)
-                {
-                    if (L[i] > L[i + 1])
-                    {
-                        temp = L[i];
-                        L[i] = L[i + 1];
-                        L[i + 1] = temp;
-                        Flag = 0;
-                    }
-                }  
-            }
-            return L;
+            });
         }
+    }
         
-        public void MergeSortPRAM(int[] L, int n){
-            if(n >= 2){
-                int m = (int)n/2;
-                int[] B = {m};
-                for(int i = 0; i < m; i++){
-                    B[i] = L[2 * i];
-                }
-
-                // for(int i = 0; i < m; i++){
-                //     Console.WriteLine(B[i]);
-                // }
-
-                int[] C = {m};
-                for(int i = 0; i < m; i++){
-                    B[i - m] = L[2 * (i -m) + 1];
-                }
-            }
-        }
-
-        public void change(int[] L, int a, int b)
+        public void interchange(int[] L, int a, int b)
         {
             int aux;
             aux = L[a];
@@ -105,21 +65,20 @@ namespace OrdenamientoEREW{
             L[b] = aux;
         }
 
-        public void oddEvenSplit(int[] L, int odd, int[] even, int n){
-            for(int i = 0; i < (int)n / 2; i++){
-                // odd[i] = L[2 * i];
-                Parallel.For(0, n, index => {
-                    if(i % 2 == 0){
-                        even[i] = L[2 * i + 1];
-                    }
-                });
-            }
+        public void oddEvenSplit(int[] L, int odd, int[] even, int n)
+        {
+            Parallel.For(0, n/2, i => {
+                if(i % 2 == 0){
+                    even[i] = L[2 * i + 1];
+                }
+            });
         }
 
-
         public void Main(string[] args){
-            MergeSort(L);
-            for(int i = 0; i < a; i++){
+            MergeSortPRAM(L, n);
+            Console.WriteLine("Ordenamiento EREW");
+            for(int i = 0; i < L.Length; i++)
+            {
                 Console.WriteLine(L[i]);
             }
         }
