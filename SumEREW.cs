@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace SumEREW
 {
     public class Program
@@ -11,11 +12,9 @@ namespace SumEREW
         public void Main(string[] args)
         {
             int[] A = {5, 2, 10, 1, 8, 12, 7, 3};
-            // int n = (int)(Math.Pow(2 , i));
             int n = 7;
             int j = 1;
 
-            // for(i = 1; i <= (Math.Log(n, 2)); i++)
             {
                 Parallel.For(1, n, i => 
                 {

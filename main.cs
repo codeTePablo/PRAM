@@ -20,7 +20,7 @@ namespace main{
             // e.Main(args);
 
             // run sumCREW
-            c.Main(args);
+            // c.Main(args);
             
             // run busquedaEREW
             // b.Main(args);
